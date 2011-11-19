@@ -7,7 +7,7 @@ class GameController < ApplicationController
   end
 
   def stay_updated
-    Registration.create params[:registration]
+    Registration.create :email => params[:email]
     flash[:notice] = "Merci à vous"
     redirect_to :root
   end

@@ -1,0 +1,6 @@
+%h1 Stay Updated !
+
+%form(action="/stay_updated" method="POST")
+  %input(class="xlarge" id="email" name="email" size="30" type="text")
+  %input(type="submit")
+
