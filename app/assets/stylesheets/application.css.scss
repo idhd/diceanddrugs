@@ -7,3 +7,23 @@
 
 
 @import 'compass-bootstrap/compass_bootstrap';
+
+.jauge-container {
+  .liquid {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    height: 0px;
+    width: 410px;
+    height: 230px;
+    background: asset-url("liquid.png", image)
+  }
+  .jauge {
+    position: absolute;
+    top: 0px;
+    height: 0px;
+    height: 281px;
+    width: 500px;
+    background: asset-url("jauge.png", image);
+  }
+}

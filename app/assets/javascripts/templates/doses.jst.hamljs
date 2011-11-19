@@ -2,3 +2,7 @@
 %input(class='toxicity' type='range' min='0' max='100' value='0')
 %input(class='efficacity' type='range' min='0' max='100' value='0')
 
+.jauge-container
+  .liquid
+  .jauge
+
