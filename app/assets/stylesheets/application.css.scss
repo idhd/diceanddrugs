@@ -9,21 +9,55 @@
 @import 'compass-bootstrap/compass_bootstrap';
 
 .jauge-container {
+  position: relative;
   .liquid {
     position: absolute;
     top: 0px;
-    left: 20px;
+//    left: px;
     height: 0px;
     width: 410px;
     height: 230px;
-    background: asset-url("liquid.png", image)
+    background: asset-url("liquid.png", image);
+    background-repeat: no-repeat;
+        
   }
   .jauge {
     position: absolute;
     top: 0px;
-    height: 0px;
     height: 281px;
     width: 500px;
     background: asset-url("jauge.png", image);
   }
 }
+
+#jauge-slider {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  top: 300px;
+  background: blue;
+  
+  .ui-slider-handle {
+//    display: block;
+    position: absolute;
+    background: red;
+    width: 10px;
+    height: 20px;
+  }
+}
+
+.timer-wrapper{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: red;
+  width: 300px;
+  height: 120px;
+  .timer{
+    width: 250px;
+    height: 70px;
+    background: black;
+    
+  }
+}
+
