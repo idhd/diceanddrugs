@@ -1,6 +1,5 @@
 class DiceAndDrugs.Router extends Backbone.Router
   routes:
-    '': 'woot'
     'animal_choice': 'animal_choice'
     'doses': 'doses'
     'stay_updated': 'stay_updated'
