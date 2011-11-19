@@ -50,5 +50,8 @@ module Diceanddrugs
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # Pour twitter bootstrap
+    config.sass.load_paths << Compass::Frameworks['compass-bootstrap'].stylesheets_directory
   end
 end
