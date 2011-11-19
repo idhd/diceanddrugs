@@ -16,6 +16,13 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'haml'
+gem "mongoid", "~> 2.3"
+gem "bson_ext", "~> 1.4"
+gem 'backbone-rails'
+gem 'pry-rails'
+gem 'compass'
+gem 'compass-bootstrap'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
