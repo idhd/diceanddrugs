@@ -6,17 +6,10 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   
-  / Le styles
-  %link{:href => "../1.3.0/bootstrap.css", :rel => "stylesheet"}
   :css
     body {
       padding-top: 60px;
     }
-  / Le fav and touch icons
-  %link{:href => "images/favicon.ico", :rel => "shortcut icon"}
-  %link{:href => "images/apple-touch-icon.png", :rel => "apple-touch-icon"}
-  %link{:href => "images/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}
-  %link{:href => "images/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}
 
   %body
     .topbar
@@ -30,6 +23,7 @@
               %a{:href => "#about"} About
             %li
               %a{:href => "#contact"} Contact
-    
+    - if flash[:notice]
+      .alert-message.success= flash[:notice]
     = yield
 

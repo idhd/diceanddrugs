@@ -1,6 +1,7 @@
 Diceanddrugs::Application.routes.draw do
   get 'game' => 'game#index'
-  
+  post 'stay_updated' => 'game#stay_updated'
+
   root :to => "home#index"
   
   # The priority is based upon order of creation:
