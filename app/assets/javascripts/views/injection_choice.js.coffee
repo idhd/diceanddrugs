@@ -28,6 +28,6 @@ class DiceAndDrugs.Views.InjectionChoice extends Backbone.View
         self.iv = true
       console.log "#{self.dtc} #{self.stc} #{self.iv}"
       if self.end()
-        window.router.navigate('doses')
+        window.router.navigate('doses', true)
   end: () ->
     @dtc && @stc && @iv

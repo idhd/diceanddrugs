@@ -29,6 +29,12 @@ class DiceAndDrugs.Views.Doses extends Backbone.View
       t=6 if t >= 6
       console.log "/assets/t#{t}e#{e}.png"
       $('img.rat').attr('src', "/assets/t#{t}e#{e}.png")
+      if t == 2 && e == 6
+        setTimeout(
+          () ->
+            window.router.navigate('last_test', true);
+          2000
+        )
 
   next_frame_eff: () ->
     self = @
