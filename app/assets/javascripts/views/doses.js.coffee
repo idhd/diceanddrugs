@@ -22,7 +22,7 @@ class DiceAndDrugs.Views.Doses extends Backbone.View
         
     $("#jauge-slider").slider();
     $("#jauge-slider").bind 'slide', (event, ui) ->
-      $('.liquid').css('background-position', "#{ui.value*4.10}px 0px");
+      $('.liquid').css('background-position', "#{ui.value*2.75}px 0px");
       console.log ui.value
     
       

@@ -13,9 +13,9 @@
   .liquid {
     position: absolute;
     top: 0px;
-//    left: px;
+    left: -240px;
     height: 0px;
-    width: 410px;
+    width: 660px;
     height: 230px;
     background: asset-url("liquid.png", image);
     background-repeat: no-repeat;
@@ -32,17 +32,17 @@
 
 #jauge-slider {
   position: absolute;
-  width: 100px;
-  height: 30px;
+  width: 450px;
+  height: 55px;
   top: 300px;
-  background: blue;
+  background: asset-url("trait1.png", image);
   
   .ui-slider-handle {
 //    display: block;
     position: absolute;
-    background: red;
-    width: 10px;
-    height: 20px;
+    width: 31px;
+    height: 89px;
+    background: asset-url("double_trait.png", image);
   }
 }
 
