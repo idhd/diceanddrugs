@@ -1,0 +1,131 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+*/
+
+
+@import 'compass-bootstrap/compass_bootstrap';
+
+body {
+  font-family: 'Redressed', cursive;
+}
+
+.jauge-container {
+  position: relative;
+  height: 190px;
+  width: 500px;
+  .liquid {
+    position: absolute;
+    top: 0px;
+    left: -240px;
+    height: 0px;
+    width: 660px;
+    height: 230px;
+  }
+  .bleu {
+    background: asset-url("blue.png", image);
+    background-repeat: no-repeat;
+  }
+  .orange {
+    background: asset-url("toxicity.png", image);
+    background-repeat: no-repeat;
+  }
+  .jauge {
+    position: absolute;
+    top: 0px;
+    height: 281px;
+    width: 500px;
+    background: asset-url("jauge.png", image);
+  }
+  .legend {
+    position: absolute;
+    top: 50px;
+    left: 180px;
+    font-size: 3em;
+  }
+}
+
+.timer-container {
+  position: relative;
+  width: 740px;
+  height: 130px;
+  margin: auto;
+}
+
+.timer-wrapper{
+  position: relative;
+  left: 150px;
+  display: inline-block;
+  .timer-mask {
+    position: absolute;
+    // top: 0px;
+    background: asset-url('barre.png', image);
+    height: 80px;
+    width: 440px;
+  }
+  .timer{
+    position: absolute;
+    // top: 0px;
+    width: 440px;
+    height: 80px;
+    background: asset-url('pieces.png', image) no-repeat;
+  }
+}
+
+.rat {
+  position: absolute;
+  top: 250px;
+  right: 100px;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#true {
+}
+#false {
+}
+.animals {
+  position: relative;
+  top: 50px;
+  width: 896px;
+  height: 572px;
+  margin:0 auto; 
+  height: 700px;
+  background: asset-url("animaux.jpg", image) no-repeat;
+}
+
+#nobread {
+  margin: auto;
+  width: 960px;
+  text-align: center;
+  font-family: 'Redressed', cursive;
+  font-size: 3em;
+}
+
+<<<<<<< HEAD
+.homme {
+  position: relative;
+  float: bottom;
+  width: 211px;
+  height: 464px;
+}
+  
+  
+  
+=======
+.add {
+  // position: absolute;
+  // top: 200px;
+  // left: 100px;
+  max-width: 200px;
+  margin: 50px;
+}
+
+.cho {
+  display: inline;
+  font-size: 3em;
+  margin: 70px;
+}
+>>>>>>> this is not a pictionary !
