@@ -17,3 +17,6 @@ class DiceAndDrugs.Router extends Backbone.Router
       
   injection_choice: () ->
     new DiceAndDrugs.Views.InjectionChoice()
+  
+  last_test: () ->
+    new DiceAndDrugs.Views.LastTest()
