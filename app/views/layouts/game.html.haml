@@ -21,7 +21,7 @@
       = yield
     .homme
   :javascript
-    var router = new DiceAndDrugs.Router();
+    window.router = new DiceAndDrugs.Router();
     Backbone.history.start();
     new DiceAndDrugs.Views.Timer()
     

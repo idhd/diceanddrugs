@@ -1,5 +1,7 @@
-.injection
-  #goodchoice
-    Click here to win
-  #badchoice
-    Click here to lose
+%img.add(src='/assets/dtc2.png' data-choice='dtc')
+%img.add(src='/assets/stc.png' data-choice='stc')
+%img.add(src='/assets/iv.png' data-choice='iv')
+%p
+  .cho(data-choice='stc') IM
+  .cho(data-choice='dtc') Rectal
+  .cho(data-choice='iv') IV
