@@ -7,6 +7,7 @@
 #= require_tree ./templates
 #= require_tree ./views
 #= require_tree ./routers
+#= require bootstrap-modal
 
 window.DiceAndDrugs =
   Models: {}

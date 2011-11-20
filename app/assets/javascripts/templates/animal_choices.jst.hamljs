@@ -1,0 +1,17 @@
+.animals
+#true.modal.hide.fade
+  .modal-header
+    %h1 pwet
+  .modal-body
+    woot
+  .modal-footer
+    %a.btn.primary Primary
+    %a.btn.secondary Secondary
+#false.modal.hide.fade
+  .modal-header
+    %h1 loser
+  .modal-body
+    YOU FAIL
+  .modal-footer
+    %a.btn.primary Primary
+    %a.btn.secondary Secondary
