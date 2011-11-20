@@ -4,26 +4,62 @@
 class DiceAndDrugs.Views.Doses extends Backbone.View
   el: '#container'
   template: JST['templates/doses']
+  eff_pos: 0
+  eff_up: true
+  eff_stop: false
+  tox_pos: 0
+  tox_up: true
+  tox_stop: false
 
   initialize: () ->
     @render()
 
   render: () ->
     $(@el).html @template()
-    $('.dose').change () ->
-      x = (3.5/($('.dose').attr('max')))*@value
-      coefy = 100/1.5
-      tox = (x) -> Math.exp((3/2)*x-2)/10
-      eff = (x) -> Math.atan(2*x-3)+1.25
-      $('.toxicity').val tox(x) * coefy
-      $('.efficacity').val eff(x) * coefy*0.58
-      console.log @value
-      $('.liquid').css('background-position', "#{@value}px 0px");
-        
-    $("#jauge-slider").slider();
-    $("#jauge-slider").bind 'slide', (event, ui) ->
-      $('.liquid').css('background-position', "#{ui.value*2.75}px 0px");
-      console.log ui.value
-    
-      
+    @next_frame_eff()
+    self = @
+    $('.estbleu').click (e) ->
+      self.eff_stop = true
+      self.next_frame_tox()
+    $('.estorange').click () ->
+      self.tox_stop = true
 
+  next_frame_eff: () ->
+    self = @
+    setTimeout(
+      () ->
+        # console.log self.eff_pos
+        x = self.eff_pos
+        $('.liquid.bleu').css('background-position', "#{x}px 0px")
+        if self.eff_up
+          self.eff_pos += 10
+        else
+          self.eff_pos -= 10
+        if self.eff_pos > 250
+          self.eff_up = false
+        if self.eff_pos < 0
+          self.eff_up = true
+        self.next_frame_eff() unless self.eff_stop
+      25
+    )
+  next_frame_tox: () ->
+    self = @
+    console.log this
+    setTimeout(
+      () ->
+        x = self.tox_pos
+        $('.liquid.orange').css('background-position', "#{x}px 0px")
+        if self.tox_up
+          self.tox_pos += 10
+        else
+          self.tox_pos -= 10
+        if self.tox_pos > 250
+          self.tox_up = false
+        if self.tox_pos < 0
+          self.tox_up = true
+        self.next_frame_tox() unless self.tox_stop
+      f(self.eff_pos)
+      
+    )
+
+f = (x) -> (250-x)/10

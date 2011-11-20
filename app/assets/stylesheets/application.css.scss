@@ -8,8 +8,14 @@
 
 @import 'compass-bootstrap/compass_bootstrap';
 
+body {
+  font-family: 'Redressed', cursive;
+}
+
 .jauge-container {
   position: relative;
+  height: 190px;
+  width: 500px;
   .liquid {
     position: absolute;
     top: 0px;
@@ -17,9 +23,14 @@
     height: 0px;
     width: 660px;
     height: 230px;
-    background: asset-url("liquid.png", image);
+  }
+  .bleu {
+    background: asset-url("blue.png", image);
     background-repeat: no-repeat;
-        
+  }
+  .orange {
+    background: asset-url("toxicity.png", image);
+    background-repeat: no-repeat;
   }
   .jauge {
     position: absolute;
@@ -28,44 +39,35 @@
     width: 500px;
     background: asset-url("jauge.png", image);
   }
-}
-
-#jauge-slider {
-  position: absolute;
-  width: 450px;
-  height: 55px;
-  top: 300px;
-  background: asset-url("trait1.png", image);
-  
-  .ui-slider-handle {
-//    display: block;
+  .legend {
     position: absolute;
-    width: 31px;
-    height: 89px;
-    background: asset-url("double_trait.png", image);
+    top: 50px;
+    left: 180px;
+    font-size: 3em;
   }
 }
 
 .timer-container {
-  position: absolute;
-  right: 0px;
-  width: 700px;
+  position: relative;
+  width: 740px;
+  height: 130px;
+  margin: auto;
 }
 
 .timer-wrapper{
   position: relative;
-  right: -120px;
+  left: 150px;
   display: inline-block;
   .timer-mask {
     position: absolute;
-    top: 0px;
+    // top: 0px;
     background: asset-url('barre.png', image);
     height: 80px;
     width: 440px;
   }
   .timer{
     position: absolute;
-    top: 0px;
+    // top: 0px;
     width: 440px;
     height: 80px;
     background: asset-url('pieces.png', image) no-repeat;
@@ -78,3 +80,10 @@
 #false {
 }
 
+#nobread {
+  margin: auto;
+  width: 960px;
+  text-align: center;
+  font-family: 'Redressed', cursive;
+  font-size: 3em;
+}

@@ -4,14 +4,19 @@
     %title
     = stylesheet_link_tag "application"
     = javascript_include_tag 'application'
+    <link href='http://fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
     = csrf_meta_tags
   %body
     .timer-container
-      = image_tag 'no_money.png', :style => 'width:100px;position:absolute;right:630px;top:30px'
+      = image_tag 'no_money.png', :style => 'width:100px;position:absolute;left:0px;top:30px'
       .timer-wrapper
         .timer
         .timer-mask
-      = image_tag 'liasse.png', :style => 'width:100px;position:absolute;right:10px;top:10px'
+      = image_tag 'liasse.png', :style => 'width:100px;position:absolute;right:0px;'
+    #nobread.row
+      .span-one-third 1. Animal choice
+      .span-one-third 2. Way
+      .span-one-third 3. toxicity
     #container
       = yield
   :javascript
