@@ -87,6 +87,11 @@ body {
 #false {
 }
 .animals {
+  position: relative;
+  top: 50px;
+  width: 896px;
+  height: 572px;
+  margin:0 auto; 
   height: 700px;
   background: asset-url("animaux.jpg", image) no-repeat;
 }

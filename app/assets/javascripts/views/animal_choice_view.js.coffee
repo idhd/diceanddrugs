@@ -16,13 +16,15 @@ class DiceAndDrugs.Views.AnimalChoice extends Backbone.View
       keyboard: true
     })
     console.log 'lol'
-    new Box(0,0,10,10,"false")
-    new Box(10,20,10,10,"false")
-    new Box(100,300,10,10,"true")
-    new Box(500,600,10,10,"false")
-          
+    new Box(0,100,470,300,"false") #singe
+    new Box(130,30,50,110,"false")   #crabe
+    new Box(490,80,120,90,"false") #aigle
+    new Box(470,345,180,130,"false") #torro
+    new Box(365,50,180,90,"false") #loup         
+    new Box(365,50,180,90,"false") #croco         
+    new Box(340,210,50,20,"true")  #souris
 class Box
   constructor: (x,y,h,w,ok) ->
     console.log 'kikoo'
-    $('.animals').append("<a data-controls-modal='#{ok}' class='btn' style='position: absolute;display: block; top: #{y}px;left: #{x}px; height: #{h}px; width: #{w}px;background: black;'></a>");
+    $('.animals').append("<a data-controls-modal='#{ok}' data-backdrop='true' class='btn' style='position: absolute;display: block; top: #{y}px;left: #{x}px; height: #{h}px; width: #{w}px;background: transparent;border: 0px;'></a>");
 

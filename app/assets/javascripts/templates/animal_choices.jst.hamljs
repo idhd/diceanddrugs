@@ -1,17 +1,19 @@
 .animals 
 #true.modal.hide.fade
   .modal-header
-    %h1 pwet
+    %h1 Winner!
   .modal-body
-    woot
+    You Win!</br>
+    You chose the right animal to test your drug!
   .modal-footer
-    %a.btn.primary Primary
-    %a.btn.secondary Secondary
+    %a(href="#way").btn.primary Primary
 #false.modal.hide.fade
   .modal-header
-    %h1 loser
+    %h1 Loser!
   .modal-body
-    YOU FAIL
+    YOU FAIL!</br>
+    You miserably killed a protected animal!
+    Choose another one!
   .modal-footer
     %a.btn.primary Primary
     %a.btn.secondary Secondary
