@@ -23,6 +23,9 @@ class DiceAndDrugs.Views.AnimalChoice extends Backbone.View
     new Box(365,50,180,90,"false") #loup         
     new Box(365,50,180,90,"false") #croco         
     new Box(340,210,50,20,"true")  #souris
+    $('.primary').bind 'click', (event) =>
+      $('#true').modal('hide')
+
 class Box
   constructor: (x,y,h,w,ok) ->
     console.log 'kikoo'

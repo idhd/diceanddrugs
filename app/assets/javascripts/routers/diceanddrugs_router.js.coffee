@@ -4,6 +4,7 @@ class DiceAndDrugs.Router extends Backbone.Router
     'doses': 'doses'
     'stay_updated': 'stay_updated'
     'injection_choice': 'injection_choice'
+    'last_test': 'last_test'
 
   animal_choice: () ->
     new DiceAndDrugs.Views.AnimalChoice()
@@ -16,4 +17,3 @@ class DiceAndDrugs.Router extends Backbone.Router
       
   injection_choice: () ->
     new DiceAndDrugs.Views.InjectionChoice()
-
