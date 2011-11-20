@@ -13,4 +13,5 @@
   .jauge
   .legend Toxicité
 
+%img.rat(src="")
 /* #jauge-slider*/

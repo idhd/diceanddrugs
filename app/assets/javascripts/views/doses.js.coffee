@@ -23,6 +23,12 @@ class DiceAndDrugs.Views.Doses extends Backbone.View
       self.next_frame_tox()
     $('.estorange').click () ->
       self.tox_stop = true
+      e = Math.floor(self.eff_pos/85)*2 + 2
+      t = Math.floor(self.tox_pos/85)*2 + 2
+      t=2 if e <= 0
+      t=6 if e >= 6
+      console.log "/assets/t#{t}e#{e}.png"
+      $('img.rat').attr('src', "/assets/t#{t}e#{e}.png")
 
   next_frame_eff: () ->
     self = @
