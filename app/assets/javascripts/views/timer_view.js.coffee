@@ -1,6 +1,7 @@
 class DiceAndDrugs.Views.Timer extends Backbone.View
   el: '.time-wrapper'
-  countdown: 5
+  time: 10000
+  period: 50
 
   initialize: () ->
     console.log 'WOoT'
@@ -11,10 +12,11 @@ class DiceAndDrugs.Views.Timer extends Backbone.View
 
   next_sec: () ->
     self = @
-    $('.timer').html @countdown
-    @countdown--
+    x = 440*((10000-@time)/10000)
+    $('.timer').css('background-position', "-#{x}px 0px")
+    @time -= @period
     setTimeout(
       () ->
         self.next_sec()
-      1000
-    ) if @countdown > -1
+      self.period
+    ) if @time > -1

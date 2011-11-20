@@ -6,8 +6,12 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    .timer-wrapper
-      .timer
+    .timer-container
+      = image_tag 'no_money.png', :style => 'width:100px;position:absolute;right:630px;top:30px'
+      .timer-wrapper
+        .timer
+        .timer-mask
+      = image_tag 'liasse.png', :style => 'width:100px;position:absolute;right:10px;top:10px'
     #container
       = yield
   :javascript

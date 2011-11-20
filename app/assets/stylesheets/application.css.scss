@@ -46,18 +46,29 @@
   }
 }
 
-.timer-wrapper{
+.timer-container {
   position: absolute;
-  top: 0px;
   right: 0px;
-  background: red;
-  width: 300px;
-  height: 120px;
+  width: 700px;
+}
+
+.timer-wrapper{
+  position: relative;
+  right: -120px;
+  display: inline-block;
+  .timer-mask {
+    position: absolute;
+    top: 0px;
+    background: asset-url('barre.png', image);
+    height: 80px;
+    width: 440px;
+  }
   .timer{
-    width: 250px;
-    height: 70px;
-    background: black;
-    color: white;
+    position: absolute;
+    top: 0px;
+    width: 440px;
+    height: 80px;
+    background: asset-url('pieces.png', image) no-repeat;
   }
 }
 
